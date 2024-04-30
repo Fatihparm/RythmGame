@@ -118,7 +118,7 @@ function drawArrowBottom(x, y) {
 
 function dropLeftArrow(velocity) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    drawCanvasUI();
+    drawCanvasUI(); // ctx clear kullandığımız için sabit arrowları tekrar çizdik
     leftArrowY = -40 + offsetY;
     drawArrowLeft(30, leftArrowY);
     offsetY += velocity;
@@ -218,7 +218,7 @@ stopButton.addEventListener("click", () => {
     // Başlat butonunu göster
     startButton.style.display = "inline";
 
-    clearInterval(gameLoopInterval);
+    clearInterval(gameLoopInterval); // Oyun döngüsünü durdur
     
     eskiSkor = skor;
     document.getElementById("eskiSkor").innerHTML = "Önceki Skor: " + eskiSkor;

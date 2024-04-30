@@ -238,7 +238,8 @@ function startGame(velocity) {
     offsetY = 0;
     leftArrowY = 0;
     upArrowY = 0;
-    rightArrowY = 0;
+    rightArrowY = 0;        
+    bottomArrowY = 0;
     const position = Math.floor(Math.random() * 4) + 1; 
     // Seçilen pozisyona göre ilgili düşme fonksiyonunu çağır
     switch (position) {

@@ -149,7 +149,7 @@ function dropRightArrow(velocity) {
 function dropBottomArrow(velocity) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawCanvasUI();
-    bottomArrowY =  -40 + offsetY;
+    bottomArrowY = -40 + offsetY;
     drawArrowBottom(705, bottomArrowY + 60);
     offsetY += velocity;
     if (offsetY < maxOffsetY) {
@@ -239,6 +239,7 @@ function startGame(velocity) {
     leftArrowY = 0;
     upArrowY = 0;
     rightArrowY = 0;
+    bottomArrowY = 0;
     const position = Math.floor(Math.random() * 4) + 1; 
     // Seçilen pozisyona göre ilgili düşme fonksiyonunu çağır
     switch (position) {
